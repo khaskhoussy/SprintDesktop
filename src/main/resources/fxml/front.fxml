@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml.FrontController">
+    <children>
+      <ImageView fitHeight="624.0" fitWidth="890.0" layoutX="-102.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/Front.jpg" />
+         </image>
+         <effect>
+            <Reflection />
+         </effect>
+      </ImageView>
+      <VBox prefHeight="600.0" prefWidth="161.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#Boutique" prefHeight="49.0" prefWidth="161.0" style="-fx-background-color: #eda678;" text="Boutique">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/boutique.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button mnemonicParsing="false" onAction="#monCompte" prefHeight="53.0" prefWidth="161.0" style="-fx-background-color: #eda678;" text="MonCompte">
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/monCompte.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button mnemonicParsing="false" onAction="#notreService" prefHeight="47.0" prefWidth="161.0" style="-fx-background-color: #eda678;" text="NotreService">
+               <graphic>
+                  <ImageView fitHeight="37.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/notreService.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button mnemonicParsing="false" onAction="#mesCommandes" prefHeight="60.0" prefWidth="161.0" style="-fx-background-color: #eda678;" text="mes Commandes">
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/mes%20commandes.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button mnemonicParsing="false" onAction="#notreOffre" prefHeight="56.0" prefWidth="161.0" style="-fx-background-color: #eda678;" text="Nos Packs">
+               <graphic>
+                  <ImageView fitHeight="39.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/pack.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button mnemonicParsing="false" onAction="#monPanier" prefHeight="59.0" prefWidth="161.0" style="-fx-background-color: #eda678;" text="Mon Panier">
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/panier.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button mnemonicParsing="false" onAction="#evenment" prefHeight="53.0" prefWidth="161.0" style="-fx-background-color: #eda678;" text="Evenement">
+               <graphic>
+                  <ImageView fitHeight="37.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/evenement.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button mnemonicParsing="false" onAction="#forom" prefHeight="58.0" prefWidth="161.0" style="-fx-background-color: #eda678;" text="Foroum">
+               <graphic>
+                  <ImageView fitHeight="42.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/forum.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button mnemonicParsing="false" onAction="#Recette" prefHeight="57.0" prefWidth="161.0" style="-fx-background-color: #eda678;" text="Nos recette">
+               <graphic>
+                  <ImageView fitHeight="44.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/nos%20recette.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button mnemonicParsing="false" onAction="#gestedumois" prefHeight="64.0" prefWidth="161.0" style="-fx-background-color: #eda678;" text="Gest du mois">
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/gestMois.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button mnemonicParsing="false" onAction="#reclamation" prefHeight="59.0" prefWidth="163.0" style="-fx-background-color: #eda678;" text="Reclamation">
+               <graphic>
+                  <ImageView fitHeight="41.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/reclamation.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+         </children>
+      </VBox>
+      <VBox layoutX="665.0" prefHeight="46.0" prefWidth="135.0">
+         <children>
+            <AnchorPane prefHeight="44.0" prefWidth="126.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#deconnectee" prefHeight="44.0" prefWidth="139.0" style="-fx-background-color: #eda678;" text="Deconnexion" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <Label layoutX="369.0" layoutY="9.0" prefHeight="63.0" prefWidth="190.0" text="Espace Client" textFill="#d30000">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

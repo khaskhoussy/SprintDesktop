@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="569.0" prefWidth="782.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml.GestionDesStaffController">
+   <children>
+      <ImageView fitHeight="501.0" fitWidth="764.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/back%20Ground.jpg" />
+         </image>
+         <effect>
+            <Reflection />
+         </effect>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="252.0" layoutY="6.0" prefHeight="44.0" prefWidth="275.0" text="Gestion des utulisateur">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="0.9" startX="0.6571428571428571" startY="0.780952380952381">
+               <stops>
+                  <Stop color="#4d2687" />
+                  <Stop color="#58dd1f" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill></Label>
+      <VBox prefHeight="95.0" prefWidth="89.0" spacing="20.0" visible="false">
+         <children>
+            <Button mnemonicParsing="false" onAction="#espaceClient" prefHeight="68.0" prefWidth="211.0" text="Client " />
+            <Button mnemonicParsing="false" onAction="#espaceJardinier" prefHeight="72.0" prefWidth="211.0" text="Jardinier" />
+            <Button mnemonicParsing="false" onAction="#espacePaysagiste" prefHeight="75.0" prefWidth="211.0" text="Paysagiste" />
+            <Button mnemonicParsing="false" onAction="#espaceExpert" prefHeight="71.0" prefWidth="211.0" text="Expert" />
+         </children>
+      </VBox>
+      <Button layoutX="659.0" layoutY="536.0" mnemonicParsing="false" onAction="#retour" prefHeight="32.0" prefWidth="107.0" style="-fx-background-color: #eda678;" text="retour">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/return.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button layoutX="649.0" mnemonicParsing="false" onAction="#deconnexion" prefHeight="32.0" prefWidth="107.0" style="-fx-background-color: #eda678;" text="deconnexion" />
+      <TableView fx:id="table" editable="true" layoutX="139.0" layoutY="59.0" prefHeight="283.0" prefWidth="527.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="75.0" text="id" />
+          <TableColumn fx:id="nom" prefWidth="75.0" text="nom" />
+            <TableColumn fx:id="prenom" prefWidth="75.0" text="prnom" />
+            <TableColumn fx:id="telephone" prefWidth="75.0" text="telephone" />
+            <TableColumn fx:id="email" prefWidth="75.0" text="Email" />
+            <TableColumn fx:id="Role" prefWidth="75.0" text="Role" />
+            <TableColumn fx:id="usernameaff" prefWidth="75.0" text="username" />
+            <TableColumn fx:id="password" prefWidth="75.0" text="password" visible="false" />
+        </columns>
+      </TableView>
+      <GridPane layoutX="14.0" layoutY="404.0" prefHeight="126.0" prefWidth="246.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="33.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="27.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Nom" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <Label text="Telephone" textFill="WHITE" GridPane.rowIndex="2">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <Label text="Prenom" textFill="#f2f2f2" GridPane.rowIndex="1">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <Label text="E-mail" textFill="WHITE" GridPane.rowIndex="3">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <TextField fx:id="nom_ajouter" GridPane.columnIndex="1" />
+            <TextField fx:id="prenom_ajouter" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="telephone_ajouter" onKeyTyped="#telTyped" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="email_ajouter" prefHeight="22.0" prefWidth="118.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="271.0" layoutY="393.0" prefHeight="126.0" prefWidth="275.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="33.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="35.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="35.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="Username" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <Label text="Role" textFill="WHITE" GridPane.rowIndex="2">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <Label text="Password" textFill="WHITE" GridPane.rowIndex="1">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <TextField fx:id="username_ajouter" GridPane.columnIndex="1" />
+            <TextField fx:id="password_ajouter" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ChoiceBox fx:id="role_ajouter" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <Button layoutX="14.0" layoutY="261.0" mnemonicParsing="false" onAction="#modifier" prefHeight="32.0" prefWidth="117.0" style="-fx-background-color: #eda678;" text="Modifier">
+         <graphic>
+            <ImageView fitHeight="22.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/modifier.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button layoutX="45.0" layoutY="536.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="32.0" prefWidth="117.0" style="-fx-background-color: #eda678;" text="ajouter">
+         <graphic>
+            <ImageView fitHeight="19.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/ajouter.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Separator layoutX="7.0" layoutY="369.0" prefHeight="3.0" prefWidth="744.0" />
+      <Button layoutX="14.0" layoutY="303.0" mnemonicParsing="false" onAction="#supprimer" prefHeight="32.0" prefWidth="117.0" style="-fx-background-color: #eda678;" text="Supprimer">
+         <graphic>
+            <ImageView fitHeight="19.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/supprimer.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button layoutX="14.0" layoutY="217.0" mnemonicParsing="false" onAction="#detail" prefHeight="32.0" prefWidth="117.0" style="-fx-background-color: #eda678;" text="Detail">
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/detail.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button layoutX="659.0" layoutY="480.0" mnemonicParsing="false" onAction="#searchAction" prefHeight="32.0" prefWidth="107.0" style="-fx-background-color: #eda678;" text="chercher">
+         <graphic>
+            <ImageView fitHeight="16.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/chercher.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <ComboBox fx:id="type" layoutX="646.0" layoutY="392.0" onAction="#typeAction" prefHeight="25.0" prefWidth="123.0" />
+      <TextField fx:id="search" layoutX="648.0" layoutY="444.0" prefHeight="25.0" prefWidth="129.0" />
+      <Label fx:id="checkLabel" layoutX="190.0" layoutY="540.0" prefHeight="44.0" prefWidth="97.0" />
+   </children>
+</AnchorPane>

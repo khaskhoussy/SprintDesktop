@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="com.mycompany_pep2_jar_1.0-SNAPSHOTPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>entits.LigneRecette</class>
+    <class>entits.LigneService</class>
+    <class>entits.OffrePromotion</class>
+    <class>entits.LigneCommande</class>
+    <class>entits.Sujet</class>
+    <class>entits.Commentaire</class>
+    <class>entits.Transporteur</class>
+    <class>entits.Categorie</class>
+    <class>entits.Produit</class>
+    <class>entits.AlbumPhoto</class>
+    <class>entits.Evenement</class>
+    <class>entits.Participation</class>
+    <class>entits.PackDecoration</class>
+    <class>entits.ListeTravail</class>
+    <class>entits.Favoris</class>
+    <class>entits.Commande</class>
+    <class>entits.Recette</class>
+    <class>entits.QuantiteDeco</class>
+    <class>entits.User</class>
+    <class>entits.Reclamation</class>
+    <class>entits.Livraison</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/pep?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value=""/>
+    </properties>
+  </persistence-unit>
+</persistence>

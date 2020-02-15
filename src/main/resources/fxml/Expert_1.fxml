@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="539.0" prefWidth="774.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml.ExpertController">
+   <children>
+      <Label alignment="CENTER" layoutX="268.0" prefHeight="74.0" prefWidth="177.0" text="Espace Expert" />
+      <VBox layoutX="-2.0" layoutY="-2.0" prefHeight="539.0" prefWidth="194.0" spacing="50.0" style="-fx-background-color: #304956;">
+         <children>
+            <Button mnemonicParsing="false" onAction="#GestionCompte" prefHeight="75.0" prefWidth="194.0" style="-fx-background-color: #eda678;" text="Gestion de compte" />
+            <Button mnemonicParsing="false" onAction="#gestionProduit" prefHeight="84.0" prefWidth="196.0" style="-fx-background-color: #eda678;" text="Gestion des Produit" />
+            <Button lineSpacing="10.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="195.0" style="-fx-background-color: #eda678;" text="Gestion des Recette" />
+            <Button mnemonicParsing="false" onAction="#gestionOffre" prefHeight="80.0" prefWidth="194.0" style="-fx-background-color: #eda678;" text="GestionOffre" />
+         </children>
+      </VBox>
+      <Button layoutX="616.0" layoutY="-2.0" mnemonicParsing="false" onAction="#deconnectee" prefHeight="66.0" prefWidth="157.0" style="-fx-background-color: #eda678;" text="Deconnexion" />
+   </children>
+</AnchorPane>

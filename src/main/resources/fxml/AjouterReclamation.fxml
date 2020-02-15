@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml.AjouterReclamationController">
+   <children>
+      <ImageView fitHeight="432.0" fitWidth="829.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/back%20Ground.jpg" />
+         </image>
+         <effect>
+            <Reflection />
+         </effect>
+      </ImageView>
+      <AnchorPane id="AnchorPane" layoutX="20.0" layoutY="20.0" prefHeight="533.0" prefWidth="780.0">
+         <children>
+            <Button fx:id="retour" layoutX="654.0" layoutY="454.0" mnemonicParsing="false" onAction="#RetourReclamationAction" prefHeight="39.0" prefWidth="91.0" style="-fx-background-color: #eda678;" text="retour">
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/return.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <GridPane layoutX="55.0" layoutY="26.0" prefHeight="325.0" prefWidth="658.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label prefHeight="39.0" prefWidth="326.0" text="Objet" textFill="#f2eeee">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label text="Contenue Reclamation" textFill="#f2f2f2" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label text="Date Reclamation" textFill="#f8f8f8" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label text="Mon ID" textFill="#eeeeee" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="objet" prefHeight="61.0" prefWidth="330.0" GridPane.columnIndex="1" />
+                  <TextField fx:id="contenue" prefHeight="122.0" prefWidth="330.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="IdUser" prefHeight="62.0" prefWidth="330.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label text="Commande ID" textFill="#f2f2f2" GridPane.rowIndex="4" />
+                  <Label text="Etat de ma Reclamation" textFill="#f5f5f5" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+                  <TextField fx:id="etat_recla" prefHeight="54.0" prefWidth="330.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <ComboBox fx:id="choiidcombobox" onMouseClicked="#ChoixIdComboBoxAction" prefHeight="55.0" prefWidth="330.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <DatePicker fx:id="date_recla" prefHeight="50.0" prefWidth="330.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+            <Button fx:id="valider" layoutX="517.0" layoutY="454.0" mnemonicParsing="false" onAction="#validAjoutReclamation" prefHeight="39.0" prefWidth="99.0" style="-fx-background-color: #eda678;" text="Valider">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/valider.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

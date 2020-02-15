@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml.AdClientController">
+     <children>
+      <ImageView fitHeight="452.0" fitWidth="1041.0" layoutY="-9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/back%20Ground.jpg" />
+         </image>
+         <effect>
+            <Reflection />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="SW_RESIZE" />
+         </cursor>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="277.0" layoutY="11.0" prefHeight="52.0" prefWidth="140.0" text="List Des Client" />
+      <TableView fx:id="Table" layoutX="14.0" layoutY="83.0" prefHeight="267.0" prefWidth="526.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="75.0" text="ID" visible="false" />
+          <TableColumn fx:id="nom" prefWidth="75.0" text="Nom" />
+            <TableColumn fx:id="prenom" prefWidth="75.0" text="Prenom" />
+            <TableColumn fx:id="email" prefWidth="75.0" text="Email" visible="false" />
+            <TableColumn fx:id="telephone" prefWidth="75.0" text="Telephone" />
+            <TableColumn fx:id="username" prefWidth="75.0" text="Username" visible="false" />
+            <TableColumn fx:id="password" prefWidth="75.0" text="Password" visible="false" />
+        </columns>
+      </TableView>
+      <Button layoutX="547.0" layoutY="161.0" mnemonicParsing="false" onAction="#SupprimerAction" prefHeight="38.0" prefWidth="120.0" style="-fx-background-color: #eda678;" text="Supprimer">
+         <graphic>
+            <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/supprimer.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button layoutX="707.0" layoutY="548.0" mnemonicParsing="false" onAction="#retour" prefHeight="38.0" prefWidth="90.0" style="-fx-background-color: #eda678;" text="retour">
+         <graphic>
+            <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/return.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <VBox layoutX="637.0" layoutY="131.0" prefHeight="59.0" prefWidth="101.0" />
+      <AnchorPane layoutX="676.0" layoutY="-9.0" prefHeight="42.0" prefWidth="98.0">
+         <children>
+            <Button layoutX="-5.0" layoutY="8.0" mnemonicParsing="false" onAction="#deconnexion" prefHeight="38.0" prefWidth="101.0" style="-fx-background-color: #eda678;" text="Dexonnexion" />
+         </children>
+      </AnchorPane>
+      <Separator layoutX="6.0" layoutY="404.0" prefHeight="0.0" prefWidth="379.0" />
+      <Separator layoutX="384.0" layoutY="406.0" orientation="VERTICAL" prefHeight="188.0" prefWidth="4.0" />
+      <Label layoutX="158.0" layoutY="407.0" prefHeight="21.0" prefWidth="72.0" text="Chercher" />
+      <Label layoutX="6.0" layoutY="457.0" prefHeight="21.0" prefWidth="80.0" text="Chercher Par" />
+      <Button layoutX="123.0" layoutY="532.0" mnemonicParsing="false" onAction="#choiceBoxButton" prefHeight="31.0" prefWidth="90.0" style="-fx-background-color: #eda678;" text="Chercher">
+         <graphic>
+            <ImageView fitHeight="18.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/chercher.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <TextField fx:id="rechercheBar" layoutX="84.0" layoutY="500.0" />
+      <ChoiceBox fx:id="ChoiceBox" layoutX="83.0" layoutY="455.0" prefWidth="150.0" />
+      <Button layoutX="547.0" layoutY="232.0" mnemonicParsing="false" onAction="#refrech" prefHeight="38.0" prefWidth="120.0" style="-fx-background-color: #eda678;" text="refrech">
+         <graphic>
+            <ImageView fitHeight="17.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/refrech.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+   </children>
+</AnchorPane>

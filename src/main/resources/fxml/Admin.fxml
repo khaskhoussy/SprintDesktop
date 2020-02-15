@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="491.0" prefWidth="719.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml.AdminController">
+   <children>
+      <ImageView fitHeight="287.0" fitWidth="347.0" layoutX="294.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/Back.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="287.0" layoutY="5.0" prefHeight="41.0" prefWidth="126.0" text="Espace Admin" />
+      <VBox prefHeight="496.0" prefWidth="208.0" spacing="4.0" style="-fx-background-color: #304956;">
+         <children>
+            <Button mnemonicParsing="false" onAction="#Compte" prefHeight="67.0" prefWidth="208.0" style="-fx-background-color: #eda678;" text="Gestion de profil">
+               <graphic>
+                  <ImageView fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/profile.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button mnemonicParsing="false" onAction="#gestionUtulisateurs" prefHeight="64.0" prefWidth="208.0" style="-fx-background-color: #eda678;" text="Gestion des utulisateurs">
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/gestionutulisateur.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button mnemonicParsing="false" prefHeight="67.0" prefWidth="208.0" style="-fx-background-color: #eda678;" text="Consulter Produit">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/consulterProduit.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button mnemonicParsing="false" prefHeight="68.0" prefWidth="208.0" style="-fx-background-color: #eda678;" text="Consulter Travaille" />
+            <Button lineSpacing="10.0" mnemonicParsing="false" onAction="#consulterReclamation" prefHeight="78.0" prefWidth="208.0" style="-fx-background-color: #eda678;" text="Consulter reclmation">
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/consulterreclamation.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button mnemonicParsing="false" onAction="#gestionEvent" prefHeight="64.0" prefWidth="208.0" style="-fx-background-color: #eda678;" text="Ajouter Evenment">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/ajouterevenemt.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button mnemonicParsing="false" onAction="#CommantaireAd" prefHeight="63.0" prefWidth="208.0" style="-fx-background-color: #eda678;" text="ListSujet">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/listdes%20sujet.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+         </children>
+      </VBox>
+      <Button layoutX="561.0" mnemonicParsing="false" onAction="#deconnectee" prefHeight="50.0" prefWidth="157.0" style="-fx-background-color: #eda678;" text="Deconnexion" />
+   </children>
+</AnchorPane>

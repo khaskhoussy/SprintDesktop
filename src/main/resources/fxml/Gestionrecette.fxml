@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="503.0" prefWidth="784.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml.GestionrecetteController">
+   <children>
+      <ImageView fitHeight="574.0" fitWidth="773.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/back%20Ground.jpg" />
+         </image>
+         <effect>
+            <Reflection />
+         </effect>
+      </ImageView>
+      <Label layoutX="272.0" layoutY="14.0" text="Recette" />
+      <HBox layoutX="14.0" layoutY="42.0" prefHeight="435.0" prefWidth="758.0">
+         <children>
+            <VBox prefHeight="274.0" prefWidth="507.0" spacing="10.0">
+               <children>
+                  <TableView fx:id="table" editable="true" prefHeight="274.0" prefWidth="420.0">
+                    <columns>
+                      <TableColumn fx:id="id" prefWidth="56.80001908540726" text="id" />
+                      <TableColumn fx:id="Nom" prefWidth="93.59997177124023" text="Nom" />
+                        <TableColumn fx:id="Desc" prefWidth="96.800048828125" text="Description" />
+                        <TableColumn fx:id="Type" prefWidth="98.39997863769531" text="Type" />
+                        <TableColumn fx:id="imagerecette" prefWidth="158.39996337890625" text="Image Recette" />
+                    </columns>
+                  </TableView>
+                  <ComboBox fx:id="CHOIXTYPERECETTE" onAction="#ChoixTypeRecetteAction" prefHeight="26.0" prefWidth="185.0" style="-fx-background-image: #eda678;" />
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="528.0" prefWidth="217.0" spacing="50.0">
+               <children>
+                  <Button fx:id="ajouter" mnemonicParsing="false" onAction="#AjouterRecetteAction" prefHeight="58.0" prefWidth="149.0" style="-fx-background-color: #eda678;" text="Ajouter">
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/ajouter.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="modifierrecette" mnemonicParsing="false" onAction="#ModifierRecetteAction" prefHeight="57.0" prefWidth="142.0" style="-fx-background-color: #eda678;" text="Modifier">
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/modifier.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="supprimerrecette" mnemonicParsing="false" onAction="#supprimerRecetteAction" prefHeight="63.0" prefWidth="143.0" style="-fx-background-color: #eda678;" text="Supprimer">
+                     <graphic>
+                        <ImageView fitHeight="19.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/supprimer.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="retour" mnemonicParsing="false" onAction="#retourExpertAction" prefHeight="67.0" prefWidth="134.0" style="-fx-background-color: #eda678;" text="retour">
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/return.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane id="pnlCustomer1" prefHeight="600.0" prefWidth="788.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml.AjouterSujetForumController">
+         <children>
+      <ImageView fitHeight="484.0" fitWidth="775.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/back%20Ground.jpg" />
+         </image>
+         <effect>
+            <Reflection />
+         </effect>
+      </ImageView>
+            <ImageView fitHeight="92.0" fitWidth="79.0" layoutX="690.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../java/image/avatar-icon-6.jpg" />
+               </image>
+            </ImageView>
+            <Pane layoutX="9.0" layoutY="132.0" prefHeight="437.0" prefWidth="775.0">
+                  <VBox fx:id="pnItems" alignment="CENTER" prefHeight="459.0" prefWidth="743.0" spacing="5.0">
+      
+                           <children>
+                        <HBox depthTest="DISABLE" prefHeight="55.0" prefWidth="873.0" spacing="15.0">
+                           <children>
+                              <Label fx:id="subject1" alignment="TOP_LEFT" contentDisplay="CENTER" prefHeight="37.0" prefWidth="83.0" text="Title :  " textAlignment="JUSTIFY" textFill="WHITE">
+                              <font>
+                                 <Font size="21.0" />
+                              </font>
+                           </Label>
+                              <TextField fx:id="title" prefHeight="35.0" prefWidth="210.0" style="-fx-background-color: #ffffff;" />
+                           <Label fx:id="Label" alignment="TOP_LEFT" contentDisplay="CENTER" prefHeight="37.0" prefWidth="83.0" text="Categorie:" textAlignment="JUSTIFY" textFill="WHITE">
+                              <font>
+                                 <Font size="18.0" />
+                              </font>
+                           </Label>
+                           <ChoiceBox fx:id="categorie" prefHeight="34.0" prefWidth="150.0" />
+                              <Button fx:id="Send" mnemonicParsing="false" onAction="#Send" prefHeight="32.0" prefWidth="123.0" style="-fx-background-color: #eda678;" text="Send">
+                        <graphic>
+                           <ImageView fitHeight="21.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@../Images/send.png" />
+                              </image>
+                           </ImageView>
+                        </graphic></Button>
+      
+                                 </children>
+                        </HBox>
+                        <HBox prefHeight="42.0" prefWidth="873.0">
+                           <children>
+                              <Label fx:id="subject" alignment="TOP_LEFT" contentDisplay="CENTER" prefHeight="34.0" prefWidth="100.0" text="Description :" textAlignment="JUSTIFY" textFill="WHITE">
+
+
+                        </Label>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="15.0" layoutY="75.0" prefHeight="274.0" prefWidth="695.0">
+                           <children>
+                              <TextArea fx:id="description" minHeight="274.0" minWidth="662.0" prefHeight="313.0" prefWidth="756.0" />
+                           </children>
+                        </HBox>
+                     <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                        <children>
+                           <Button alignment="BOTTOM_RIGHT" mnemonicParsing="false" onAction="#Retour" prefHeight="32.0" prefWidth="83.0" style="-fx-background-color: #eda678;" text="Retour">
+                        <graphic>
+                           <ImageView fitHeight="44.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@../Images/return.png" />
+                              </image>
+                           </ImageView>
+                        </graphic></Button>
+                        </children>
+                     </HBox>
+                     </children>
+                  </VBox>
+            </Pane>
+         </children>
+      </Pane>

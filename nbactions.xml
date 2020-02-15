@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+        <action>
+            <actionName>CUSTOM-ammar</actionName>
+            <displayName>ammar</displayName>
+            <goals>
+                <goal>exec:java</goal>
+                <goal>-Dexec.mainClass="com.mycompany.pep2.MainApp"</goal>
+            </goals>
+        </action>
+    </actions>
